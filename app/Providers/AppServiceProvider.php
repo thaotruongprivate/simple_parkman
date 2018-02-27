@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Providers;
+namespace simple_parkman\Providers;
 
 use Illuminate\Support\ServiceProvider;
 
