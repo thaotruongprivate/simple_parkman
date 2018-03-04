@@ -1,7 +1,7 @@
 # Simple Parkman API
 
 This is a very simple version of Parkman the app.
-Users are able to fetch a list of garages, with optional filters: garage's name, garage owner's name and garage's location.
+Users are able to fetch a list of garages, with optional filters: garage's name, garage owner's name and garage's location. These filters can be used alone or together.
 
 ## Creator's note
 - no auth is needed
