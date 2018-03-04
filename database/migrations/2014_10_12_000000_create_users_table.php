@@ -4,20 +4,21 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateGarageOwnerTable extends Migration {
+class CreateUsersTable extends Migration {
     /**
      * Run the migrations.
      *
      * @return void
      */
     public function up() {
-        Schema::create('garage_owner', function(Blueprint $table) {
-            $table->string('owner_id', 9);
-            $table->string('name', 50);
+        Schema::create('users', function(Blueprint $table) {
+            $table->increments('id');
+            $table->string('name');
+            $table->string('email')->unique();
+            $table->string('password');
+            $table->rememberToken();
             $table->timestamp('created_at')->default(DB::raw('CURRENT_TIMESTAMP'));
             $table->timestamp('updated_at')->default(DB::raw('CURRENT_TIMESTAMP'));
-            $table->primary('owner_id');
-            $table->index('name');
         });
     }
 
@@ -27,6 +28,6 @@ class CreateGarageOwnerTable extends Migration {
      * @return void
      */
     public function down() {
-        Schema::dropIfExists('garage_owner');
+        Schema::dropIfExists('users');
     }
 }

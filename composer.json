@@ -25,7 +25,10 @@
         ],
         "psr-4": {
             "simple_parkman\\": "app/"
-        }
+        },
+        "files": [
+            "app/Helpers.php"
+        ]
     },
     "autoload-dev": {
         "psr-4": {
@@ -48,6 +51,9 @@
         "post-autoload-dump": [
             "Illuminate\\Foundation\\ComposerScripts::postAutoloadDump",
             "@php artisan package:discover"
+        ],
+        "test" : [
+            "vendor/bin/phpunit"
         ]
     },
     "config": {
