@@ -10,6 +10,9 @@ Users are able to fetch a list of garages, with optional filters: garage's name,
 
 ## Installation
 - download the repository to your PC
+- create an empty schema
+- change DB's credentials in .env file to point to that schema
+- run composer
 - run migration and seed
 - serve the app on some IP address
 
